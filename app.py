@@ -136,7 +136,7 @@ elif page == "Графики":
     # st.pyplot(fig)
 
     # Построение графика общей маржи по месяцам
-    monthly_margin = data.groupby('Месяц')['Маржа'].sum()
+    monthly_margin = data.groupby('Месяц')['Маржа, руб б/НДС'].sum()
     fig, ax = plt.subplots(figsize=(10, 6))
     monthly_margin.plot(kind='line', ax=ax, marker='o', color='orange')
     ax.set_title("Общая маржа по месяцам", fontsize=16)
